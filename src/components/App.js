@@ -2,12 +2,13 @@ import React from 'react'
 
 // components
 import Search from './Search'
+import AppNavbar from './AppNavbar'
 
 export default function App() {
 
 	return (
 		<div>
-			<h1>Hello</h1>
+			<AppNavbar />
 			<Search />
 		</div>
 

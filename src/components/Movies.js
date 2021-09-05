@@ -1,8 +1,6 @@
 import React from 'react';
-import bootstrap from 'bootstrap'
 
 /*bootstrap*/
-import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
 
 export default function Movies({movie}){

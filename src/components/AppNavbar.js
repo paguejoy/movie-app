@@ -6,7 +6,6 @@ import Nav from 'react-bootstrap/Nav';
 
 
 
-
 export default function AppNavbar() {
 
 	return (

@@ -34,18 +34,24 @@ export default function Search(){
 
 	return (
 
-	<div>
-		<Form className="form mb-3" onSubmit={searchMovies}>
-			<Form.Group>
-				<Form.Label htmlFor="query" className="label">Movie Name</Form.Label>
-				<Form.Control type="text" className="input" name="query" placeholder="i.e. The Flash" value={query} onChange={(e) => setQuery(e.target.value)}/>
-				<Button className="btn btn-primary button" type="submit">Search</Button>
-			</Form.Group>
-		</Form>
-		<div>
-			{movies.filter(movie => movie.poster_path).map(movie =>
-				<Movies movie = {movie}  key={movie.id}/>
-			)}
+	<div className="container">
+		<div className="row justify-content-center">
+			<div className="col-12 col-md-8">
+				<Form className="form my-5" onSubmit={searchMovies}>
+					<Form.Group>
+						<Form.Label htmlFor="query" className="label text-white"> <h1>Movie Name</h1> </Form.Label>
+						<Form.Control type="text" className="input" name="query" placeholder="i.e. The Flash" value={query} onChange={(e) => setQuery(e.target.value)}/>
+						<div className="mt-4">
+							<Button className="btn btn-info button" type="submit">Search</Button>
+						</div>
+					</Form.Group>
+				</Form>
+				<div>
+					{movies.filter(movie => movie.poster_path).map(movie =>
+						<Movies movie = {movie}  key={movie.id}/>
+					)}
+				</div>
+			</div>
 		</div>
 	</div>
 
